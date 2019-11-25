@@ -1,0 +1,75 @@
+/*Start global*/
+/*end global*/
+body{
+    background-color: black;
+}
+/*start main div*/
+.main{
+    text-transform: capitalize;
+    margin: 10% auto;
+    width: 300px;
+    height: 380px;
+    background-color: rgb(115, 155, 194);
+    box-shadow: 5px 5px 5px rgb(221, 175, 114),
+               -5px -5px 5px rgb(224, 197, 121) ;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+/*end main div*/
+/*start h1*/
+.main h1{
+    text-align: center;
+    margin-top: 0px;
+}
+/*end h1*/
+/*start p*/
+p{
+    margin-bottom: 0px;
+    font-size: 18px;
+}
+/*end p*/
+/*start input*/
+.main input{
+    margin: 5px;
+    height: 25px;
+    width: 200px;
+    border-top: 10px;
+    padding: 2px;
+}
+/*end input*/
+/*start h1*/
+/*start select*/
+.main select{
+    width: 220px;
+    padding: 5px;
+    margin-left: 5px;
+    background-color: #DDD;
+    font-size: 20px;
+    
+}
+/*end select*/
+/*start button*/
+.main button{
+    padding: 15px;
+    padding-top: 7px;
+    background-color: black;
+    color: wheat;
+    text-transform: capitalize;
+    width: 100px;
+    height: 30px;
+    margin-left: 90px;
+    margin-top: 15px;
+}
+.main button:hover{
+    background-color: #DDD;
+    transition: 1s;
+    color: black;
+}
+/*end button*/
+.main #result{text-align: center;}
+
+
+
+
+

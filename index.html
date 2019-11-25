@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="main">
+        <!--main head-->
+    <h1>tip calculator</h1>
+    <!--our form-->
+    <form id="form">
+        <!--the price-->
+        <p>how much was your bill?</p>
+        <span>$</span><input type="number" placeholder="" id="bill">
+        <!--our service-->
+        <p>how was your service?</p>
+        <select id="service">
+            <option value= "0.5">Terrible-5%</option>
+            <option value="0.1">Bad-10%</option>
+            <option value="0.15">ok-15%</option>
+            <option value="0.2">Good-20%</option>
+            <option value="0.3">Outstanding-30%</option>
+        </select>
+        <!--number of people-->
+        <p>how many people are sharing the bill?</p>
+        <input type="number" placeholder="" id="people"><span>people</span>
+        <!--to calculate the result-->
+        <button type="button" id="button">submit</button>
+        
+    </form>
+    <p id="result"><span>$00.0</span></p>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
