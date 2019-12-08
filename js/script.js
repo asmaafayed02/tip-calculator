@@ -1,7 +1,7 @@
 // define the selecltor html element
-let billValue = document.getElementById('bill').value,
-    service = document.getElementById('service').value,
-     people = document.getElementById('people').value,
+let billValue = document.getElementById('bill'),
+    service = document.getElementById('service'),
+     people = document.getElementById('people'),
      submitButton = document.getElementById('button'),
      result = document.getElementById('result');
 
@@ -27,26 +27,33 @@ result.style.display = 'none';
             }
             getInfo(){
                // check the validation
-                if(this.bill === null || this.number === null){
+                if(this.bill = null|| this.number == null){
                     window.alert('this field is required')
                    } 
-                // calculate the value of amunt tip
-                let calculateTip = ((this.bill * this.number) / this.ser);
+                  
+                // calculate the value of amount tip
+                var calculateTip = ((this.bill * this.ser) / this.number);
                 //for the float numbers
-                calculateTip = Math.round(calculateTip * 100) / 100;
+              //  calculateTip = Math.round(calculateTip * 100) / 100;
                 //show the result
                 result.style.display = 'block';
                 // put the result inside html element
-                result.innerText = calculateTip;
+               result.textContent = calculateTip;
                    
             }
         }
-        
-        
+        var serval = service.addEventListener('click',()=>{
+            let options = service.value;
+    
+               return options;
+              
+          })    
+       
         //claculate when the user click the button
     submitButton.addEventListener('click',(e)=>{
          e.preventDefault();
-        let calc = new Calculater(billValue,service,people);
+      
+        let calc = new Calculater(billValue.value,serval,people.value);
         calc.getInfo()
        
     })
