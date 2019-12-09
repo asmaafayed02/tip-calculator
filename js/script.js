@@ -9,10 +9,8 @@ let billValue = document.getElementById('bill'),
 // hide the result 00.0
 result.style.display = 'none';
 // define the global or perant class
-   class items {
-         bill
-         ser
-         number
+   class Items {
+      
          constructor(bill,ser,number){
               this.bill = bill;
               this.ser = ser;
@@ -21,7 +19,7 @@ result.style.display = 'none';
         
         }
         //the child class 
-        class Calculater extends items{
+        class Calculater extends Items{
             constructor(bill,ser,number){
                super(bill,ser,number);
                 
@@ -36,16 +34,17 @@ result.style.display = 'none';
           }*/
             getInfo(){
                //check the validation
-               if(this.bill === ''|| this.number === ''){
-                    window.alert('this field is required')
+               if(this.bill === ''|| this.number === '' || this.bill < 0 || this.number < 0){
+                   //the error measage
+                    window.alert('these fields are required and didnot accept any negative number');                    
+                   //hide the error measage
+                         resultSpan.style.display = 'none';
                    } 
                   
                 // calculate the value of amount tip
-                var calculateTip = ((this.bill / this.ser) * this.number);
+                var calculateTip = ((this.bill / this.number) * this.ser);
                 //for the float numbers
-              //  calculateTip = Math.round(calculateTip * 100) / 100;
-                //show the result
-          
+              calculateTip = Math.round(calculateTip * 100) / 100;
                return calculateTip;
                    
             }
@@ -62,4 +61,5 @@ result.style.display = 'none';
          resultSpan.innerHTML = calculateTip;
          result.appendChild(resultSpan)
          result.style.display = 'block';
+
     })
