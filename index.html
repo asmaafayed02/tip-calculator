@@ -14,7 +14,7 @@
     <form id="form">
         <!--the price-->
         <p>how much was your bill?</p>
-        <span>$</span><input type="number" placeholder="" id="bill" autofocus>
+        <span>$</span><input type="number" placeholder="" id="bill" autofocus min="0">
         <!--our service-->
         <p>how was your service?</p>
         <select id="service">
@@ -26,12 +26,12 @@
         </select>
         <!--number of people-->
         <p>how many people are sharing the bill?</p>
-        <input type="number" placeholder="" id="people"><span>people</span>
+        <input type="number" placeholder="" id="people" min="0"><span>people</span>
         <!--to calculate the result-->
         <button type="button" id="button">submit</button>
         
     </form>
-    <p id="result"><span>$00.0</span></p>
+    <p id="result"><span id="put">$00.0</span></p>
     </div>
     <script src="js/script.js"></script>
 </body>
