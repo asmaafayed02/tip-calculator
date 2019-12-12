@@ -13,7 +13,7 @@ result.style.display = 'none';
       
          constructor(bill,ser,number){
               this.bill = bill;
-              this.ser = ser;
+              this.ser = ser ;
               this.number = number;
          }
         
@@ -34,12 +34,24 @@ result.style.display = 'none';
           }*/
             getInfo(){
                //check the validation
-               if(this.bill === ''|| this.number === '' || this.bill < 0 || this.number < 0){
+               if(this.bill === ''  ){
                    //the error measage
-                    window.alert('these fields are required and didnot accept any negative number');                    
+                    window.alert('please enter the value of  your bill');                    
                    //hide the error measage
                          resultSpan.style.display = 'none';
-                   } 
+
+               }else if (this.number === ''){
+                    //the error measage
+                    window.alert('please enter the value of people');                    
+                   //hide the error measage
+                         resultSpan.style.display = 'none';
+
+               }else if (this.bill < 0 || this.number < 0) {
+                    //the error measage
+                      window.alert('Please enter only postive numbers, the fields didnot accept negative values');                    
+                    //hide the error measage
+                      resultSpan.style.display = 'none';
+               }else{
                   
                 // calculate the value of amount tip
                 var calculateTip = ((this.bill / this.number) * this.ser);
@@ -48,6 +60,7 @@ result.style.display = 'none';
                return calculateTip;
                    
             }
+          }
         }
      
        
@@ -55,10 +68,10 @@ result.style.display = 'none';
     submitButton.addEventListener('click',(e)=>{
          e.preventDefault();     
         let calc = new Calculater(billValue.value,service.value,people.value);
-          var calculateTip = calc.getInfo();
+          var mycalculateTip = calc.getInfo();
           
        // put the result inside html element
-         resultSpan.innerHTML = calculateTip;
+         resultSpan.innerHTML = mycalculateTip;
          result.appendChild(resultSpan)
          result.style.display = 'block';
 
