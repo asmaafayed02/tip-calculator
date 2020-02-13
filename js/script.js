@@ -1,10 +1,10 @@
 // define the selecltor html element
-let billValue = document.getElementById('bill'),
-    service = document.getElementById('service'),
-     people = document.getElementById('people'),
-     submitButton = document.getElementById('button'),
-     result = document.getElementById('result'),
-     resultSpan = document.getElementById('put');
+let   billValue = document.getElementById('bill'),
+      service = document.getElementById('service'),
+      people = document.getElementById('people'),
+      submitButton = document.getElementById('button'),
+      result = document.getElementById('result'),
+      resultSpan = document.getElementById('put');
 
 // hide the result 00.0
 result.style.display = 'none';
@@ -24,6 +24,7 @@ result.style.display = 'none';
                super(bill,ser,number);
                 
             }
+        //anther logic
         /*  bill
           ser
           number
@@ -48,13 +49,13 @@ result.style.display = 'none';
 
                }else if (this.bill < 0 || this.number < 0) {
                     //the error measage
-                      window.alert('Please enter only postive numbers, the fields didnot accept negative values');                    
+                      window.alert(`Please enter only postive numbers, the fields didnot accept negative values`);                    
                     //hide the error measage
                       resultSpan.style.display = 'none';
                }else{
                   
                 // calculate the value of amount tip
-                var calculateTip = ((this.bill / this.number) * this.ser);
+                let calculateTip = ((this.bill / this.number) * this.ser);
                 //for the float numbers
               calculateTip = Math.round(calculateTip * 100) / 100;
                return calculateTip;
@@ -68,7 +69,7 @@ result.style.display = 'none';
     submitButton.addEventListener('click',(e)=>{
          e.preventDefault();     
         let calc = new Calculater(billValue.value,service.value,people.value);
-          var mycalculateTip = calc.getInfo();
+        let mycalculateTip = calc.getInfo();
           
        // put the result inside html element
          resultSpan.innerHTML = mycalculateTip;
